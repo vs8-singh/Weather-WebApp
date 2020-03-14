@@ -5,7 +5,7 @@ const geocode = (address, callback) => {
         if(error){
             callback('Something went wrong :(',undefined)
         }else if(response.body.features.length == 0){
-            callback('We have no information aboout that location',undefined)
+            callback('No such location, please enter valid location.',undefined)
         }else{
             callback(undefined,response.body.features[0])
         }

@@ -6,7 +6,7 @@ const weather = (location, callback) => {
         if(error){
             callback('Something went wrong :(',undefined)
         }else if(response.body.error){
-            callback('Unable to find location!',undefined)
+            callback('No such location, please enter valid location.',undefined)
         }else{
             callback(undefined,response.body)
         }
